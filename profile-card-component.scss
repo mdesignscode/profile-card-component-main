@@ -23,10 +23,8 @@ body {
     background: $cyan;
     height: 100%;
     width: 100%;
-    display: grid;
-    place-items: center;
     text-align: center;
-    font-size: 12px;
+    font-size: 100%;
 }
 
 * {
@@ -48,273 +46,90 @@ body {
 }
 
 
-/* ********************** Card styling  ********************** */
 
-.container {
-    position: relative;
+/* ********************** Background styling  ********************** */
 
-    /* ********************** Background styling  ********************** */
-
-    .bg-top,
-    .bg-bottom {
-        position: fixed;
-        z-index: -10;
-    }
+.background {
+    position: fixed;
+    z-index: -10;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
 
     .bg-top {
-        left: -42rem;
+        position: relative;
         top: -42rem;
-        height: 80em;
-        width: 80em;
-        animation: bounceDown 10s;
+        left: -45rem;
     }
 
     .bg-bottom {
-        bottom: -42rem;
-        right: -42rem;
-        animation: bounceUp 10s;
-    }
-
-
-
-    /* ********************** Animation styling  ********************** */
-
-    @keyframes bounceDown {
-
-        @mixin bounceDown($circlePosition, $TopCircleHeight) {
-            top: $circlePosition;
-            left: $circlePosition;
-            height: $TopCircleHeight;
-            width: $TopCircleHeight;
-        }
-
-        0% {
-            @include bounceDown(-20rem, 30em)
-        }
-
-        50% {
-            @include bounceDown(20rem, 40em)
-        }
-
-        100% {
-            @include bounceDown(-10rem, 50em);
-        }
-
-    }
-
-    @keyframes bounceUp {
-
-        @mixin bounceUp ($circlePosition, $circleHeight) {
-            bottom: $circlePosition;
-            right: $circlePosition;
-            height: $circleHeight;
-            width: $circleHeight;
-        }
-
-        0% {
-            @include bounceUp(-20rem, 30em)
-        }
-
-        50% {
-            @include bounceUp(20rem, 40em)
-        }
-
-        100% {
-            @include bounceUp(-10rem, 50em);
-        }
-
-    }
-
-
-
-    /* ********************** Large screens animation styling  ********************** */
-
-    @media (min-width: 768px) {
-
-        @keyframes bounceDown {
-
-            @mixin bounceDown($circlePosition, $circleHeight) {
-                top: $circlePosition;
-                left: $circlePosition;
-                height: $circleHeight;
-                width: $circleHeight;
-            }
-
-            0% {
-                @include bounceDown(-30rem, 40em)
-            }
-
-            50% {
-                @include bounceDown(30rem, 50em)
-            }
-
-            100% {
-                @include bounceDown(-20rem, 60em);
-            }
-
-        }
-
-        @keyframes bounceUp {
-
-            @mixin bounceUp ($circlePosition, $circleHeight) {
-                bottom: $circlePosition;
-                right: $circlePosition;
-                height: $circleHeight;
-                width: $circleHeight;
-            }
-
-            0% {
-                @include bounceUp(-30rem, 40em)
-            }
-
-            50% {
-                @include bounceUp(30rem, 50em)
-            }
-
-            100% {
-                @include bounceUp(-20rem, 60em);
-            }
-
-        }
-
-    }
-
-    /* ********************** Media Queries  ********************** */
-
-    @mixin mediaQuery($size) {
-        @media (min-width: $size) {
-            @content;
-        }
-    }
-
-    @mixin topCircle($topBottom, $leftRight) {
-        .bg-top {
-            left: $leftRight;
-            top: $topBottom;
-        }
-
-        .bg-bottom {
-            bottom: $topBottom;
-            right: $leftRight;
-        }
-    }
-
-    $large_phone: 600px;
-    $tablet: 768px;
-    $desktop: 992px;
-    $l_desktop: 1200px;
-
-    @include mediaQuery($large_phone) {
-        @include topCircle($leftRight: -35rem, $topBottom: -39rem)
-    }
-
-    @include mediaQuery($tablet) {
-        @include topCircle($leftRight: -32rem, $topBottom: -39rem)
-    }
-
-    @include mediaQuery($desktop) {
-        @include topCircle($leftRight: -25rem, $topBottom: -39rem)
-    }
-
-    @include mediaQuery($l_desktop) {
-        @include topCircle($leftRight: -15rem, $topBottom: -39rem)
-    }
-
-    /* ********************** Profile card styling  ********************** */
-
-    .profile-card {
-        margin: 7rem 2rem 2rem;
-        background-color: #fff;
-        width: 29.1em;
-        border-radius: 0.8em;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.025), 0 6.7px 5.3px rgba(0, 0, 0, 0.036), 0 12.5px 10px rgba(0, 0, 0, 0.045), 0 22.3px 17.9px rgba(0, 0, 0, 0.054), 0 41.8px 33.4px rgba(0, 0, 0, 0.065), 0 100px 80px rgba(0, 0, 0, 0.09);
-
-        .bg-cover {
-            border-radius: 0.8em 0.8em 0 0;
-        }
-
-        .details {
-            margin-top: 4rem;
-            border-bottom: 1px solid hsl(0, 4%, 78%);
-            width: 100%;
-
-            .personal-details {
-                display: flex;
-                flex-direction: row;
-                justify-content: center;
-
-                #age {
-                    margin-left: 0.8rem;
-                }
-            }
-
-            p {
-                font-size: 14px;
-                margin-bottom: 1.8rem;
-            }
-        }
-
-        /* ********************** Display pic styling  ********************** */
-
-        .display-pic {
-            position: absolute;
-            left: 50%;
-            top: 46%;
-            transform: translate(-50%, -50%);
-            border: 0.55em solid #fff;
-            border-radius: 50%;
-        }
-
-        /* ********************** Profile stats styling  ********************** */
-
-        .profile-stats {
-            display: flex;
-            margin-top: 1.8rem;
-            margin-bottom: 1.8rem;
-
-            .stat-header {
-                font-size: 0.75rem;
-            }
-
-            .stats:nth-of-type(2) {
-                margin-inline: 3rem;
-            }
-        }
+        background-image: url(./images/bg-pattern-bottom.svg);
+        position: relative;
+        bottom: 43rem;
+        right: -10rem;
     }
 }
 
 
-/* ********************** Attribute styling  ********************** */
+/* ********************** Profile card styling  ********************** */
 
-.attribution {
-    color: #fff;
-    font-size: 1.2em;
+.profile-card {
+    background-color: #fff;
+    width: 350px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 1rem;
 
-    a {
-        color: $desaturated-blue;
-        font-family: georgia, serif;
-        color: #2D3248;
-        animation: colorful 5s 3s infinite;
+    .bg-cover {
+        border-radius: 1rem 1rem 0 0;
     }
 
-    /* ********************** Anchor tag hover animation ********************** */
+    .personal-details {
+        display: flex;
+        justify-content: center;
+        margin-top: 3.5rem;
 
-    @keyframes colorful {
-        0% {
-            color: #fff;
+        #age {
+            margin-left: 0.8rem;     
         }
 
-        50% {
-            color: $dark-gray;
+    }
+
+    #city {
+        font-size: 0.85em;
+        margin-bottom: 1.8rem;
+        margin-top: 0.4rem;
+    }
+
+    .display-pic {
+        border-radius: 50%;
+        position: absolute;
+        left: 50%;
+        top: 36%;
+        transform: translate(-50%, -50%);
+        border: 0.4rem solid #fff;
+    }
+
+    .profile-stats {
+        border-top: 1px gray solid;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .stats {
+            margin: 1.8rem 0;
         }
 
-        100% {
-            color: $grayish-blue;
+        .stats:nth-child(2) {
+            margin-inline: 3rem;
         }
+
+        .stat-header {
+            font-size: 0.75em;
+        }
+
     }
 
 }
