@@ -59,15 +59,52 @@ body {
     .bg-top {
         position: relative;
         top: -42rem;
-        left: -45rem;
+        left: -42rem;
     }
 
     .bg-bottom {
-        background-image: url(./images/bg-pattern-bottom.svg);
         position: relative;
-        bottom: 43rem;
+        bottom: 41rem;
         right: -10rem;
     }
+
+    /* ********************** Media queries ********************** */
+
+    @mixin mediaQuerie($screenSize) {
+        @media (min-width: $screenSize) {
+            @content
+        }
+    }
+
+    @mixin background($left, $right) {
+
+        .bg-top {
+            top: -42rem;
+            left: $left;
+        }
+
+        .bg-bottom {
+            bottom: 41rem;
+            right: $right;
+        }
+    }
+
+    @include mediaQuerie(600px) {
+        @include background(-38rem, -15rem)
+    }
+
+    @include mediaQuerie(768px) {
+        @include background(-32rem, -20rem)
+    }
+
+    @include mediaQuerie(998px) {
+        @include background(-26rem, -25rem)
+    }
+
+    @include mediaQuerie(1200px) {
+        @include background(-25rem, -30rem)
+    }
+
 }
 
 
@@ -92,7 +129,7 @@ body {
         margin-top: 3.5rem;
 
         #age {
-            margin-left: 0.8rem;     
+            margin-left: 0.8rem;
         }
 
     }
