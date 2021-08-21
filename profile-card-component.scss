@@ -76,20 +76,24 @@ body {
         }
     }
 
-    @mixin background($left, $right) {
+    @mixin background($top, $left, $bottom, $right) {
 
         .bg-top {
-            top: -42rem;
+            top: $top;
             left: $left;
         }
 
         .bg-bottom {
-            bottom: 41rem;
+            bottom: $bottom;
             right: $right;
         }
     }
 
-    @include mediaQuerie(600px) {
+    @include mediaQuerie(300px) {
+        @include background(-41rem, -45rem, 43rem, -10rem)
+    }
+
+    /* @include mediaQuerie(600px) {
         @include background(-38rem, -15rem)
     }
 
@@ -104,7 +108,7 @@ body {
     @include mediaQuerie(1200px) {
         @include background(-25rem, -30rem)
     }
-
+ */
 }
 
 
