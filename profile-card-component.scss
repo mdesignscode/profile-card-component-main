@@ -62,48 +62,14 @@ body {
     }
 
     .bg-bottom {
-        transform: translate(70%, 65%);
-        bottom: 0;
-        right: 0;
+        transform: translate(-5%, 30%);
     }
 
     /* ********************** Media queries ********************** */
 
-    @mixin mediaQuerie($screenSize) {
-        @media (min-width: $screenSize) {
-            @content
-        }
-    }
 
-    @mixin background($top, $left, $bottom, $right) {
 
-        .bg-top {
-            top: $top;
-            left: $left;
-        }
 
-        .bg-bottom {
-            bottom: $bottom;
-            right: $right;
-        }
-    }
-
-    /* @include mediaQuerie(600px) {
-        @include background(-38rem, -15rem)
-    }
-
-    @include mediaQuerie(768px) {
-        @include background(-32rem, -20rem)
-    }
-
-    @include mediaQuerie(998px) {
-        @include background(-26rem, -25rem)
-    }
-
-    @include mediaQuerie(1200px) {
-        @include background(-25rem, -30rem)
-    }
- */
 }
 
 
