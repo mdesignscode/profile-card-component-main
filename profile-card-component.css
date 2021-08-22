@@ -1,4 +1,10 @@
 /* ********************** Global element styling  ********************** */
+html {
+  min-height: 100vh;
+  height: 100vh;
+  overflow: hidden;
+}
+
 h1 {
   font-size: 18px;
   color: #2d3248;
@@ -41,20 +47,150 @@ body {
 }
 
 /* ********************** Background styling  ********************** */
-.background {
-  /* ********************** Media queries ********************** */
-}
 .background .bg-top,
 .background .bg-bottom {
   position: absolute;
 }
 .background .bg-top {
   transform: translate(-95%, -65%);
+  -webkit-transform: translate(-95%, -65%);
+  -moz-transform: translate(-95%, -65%);
+  -ms-transform: translate(-95%, -65%);
+  -o-transform: translate(-95%, -65%);
+  animation: bounceDown 10s;
+  -webkit-animation: bounceDown 10s;
 }
 .background .bg-bottom {
   transform: translate(-5%, 30%);
+  -webkit-transform: translate(-5%, 30%);
+  -moz-transform: translate(-5%, 30%);
+  -ms-transform: translate(-5%, 30%);
+  -o-transform: translate(-5%, 30%);
+  animation: bounceUp 10s;
+  -webkit-animation: bounceUp 10s;
 }
 
+/* ********************** Animations styling ********************** */
+@keyframes bounceDown {
+  0% {
+    transform: translate(-200%, -100%);
+    width: 30em;
+    height: 30em;
+    -webkit-transform: translate(-200%, -100%);
+    -moz-transform: translate(-200%, -100%);
+    -ms-transform: translate(-200%, -100%);
+    -o-transform: translate(-200%, -100%);
+  }
+  50% {
+    transform: translate(100%, 100%);
+    width: 30em;
+    height: 30em;
+    -webkit-transform: translate(100%, 100%);
+    -moz-transform: translate(100%, 100%);
+    -ms-transform: translate(100%, 100%);
+    -o-transform: translate(100%, 100%);
+  }
+  100% {
+    transform: translate(-200%, -100%);
+    width: 30em;
+    height: 30em;
+    -webkit-transform: translate(-200%, -100%);
+    -moz-transform: translate(-200%, -100%);
+    -ms-transform: translate(-200%, -100%);
+    -o-transform: translate(-200%, -100%);
+  }
+}
+@media (max-width: 768px) {
+  @keyframes bounceDown {
+    0% {
+      transform: translate(-100%, -100%);
+      width: 30em;
+      height: 30em;
+      -webkit-transform: translate(-100%, -100%);
+      -moz-transform: translate(-100%, -100%);
+      -ms-transform: translate(-100%, -100%);
+      -o-transform: translate(-100%, -100%);
+    }
+    50% {
+      transform: translate(0%, 100%);
+      width: 30em;
+      height: 30em;
+      -webkit-transform: translate(0%, 100%);
+      -moz-transform: translate(0%, 100%);
+      -ms-transform: translate(0%, 100%);
+      -o-transform: translate(0%, 100%);
+    }
+    100% {
+      transform: translate(-100%, -100%);
+      width: 30em;
+      height: 30em;
+      -webkit-transform: translate(-100%, -100%);
+      -moz-transform: translate(-100%, -100%);
+      -ms-transform: translate(-100%, -100%);
+      -o-transform: translate(-100%, -100%);
+    }
+  }
+}
+@keyframes bounceUp {
+  0% {
+    transform: translate(100%, 100%);
+    width: 30em;
+    height: 30em;
+    -webkit-transform: translate(100%, 100%);
+    -moz-transform: translate(100%, 100%);
+    -ms-transform: translate(100%, 100%);
+    -o-transform: translate(100%, 100%);
+  }
+  50% {
+    transform: translate(-200%, -100%);
+    width: 30em;
+    height: 30em;
+    -webkit-transform: translate(-200%, -100%);
+    -moz-transform: translate(-200%, -100%);
+    -ms-transform: translate(-200%, -100%);
+    -o-transform: translate(-200%, -100%);
+  }
+  100% {
+    transform: translate(100%, 100%);
+    width: 30em;
+    height: 30em;
+    -webkit-transform: translate(100%, 100%);
+    -moz-transform: translate(100%, 100%);
+    -ms-transform: translate(100%, 100%);
+    -o-transform: translate(100%, 100%);
+  }
+}
+@media (max-width: 768px) {
+  @keyframes bounceUp {
+    0% {
+      transform: translate(50%, 100%);
+      width: 30em;
+      height: 30em;
+      -webkit-transform: translate(50%, 100%);
+      -moz-transform: translate(50%, 100%);
+      -ms-transform: translate(50%, 100%);
+      -o-transform: translate(50%, 100%);
+    }
+    50% {
+      transform: translate(-150%, -100%);
+      width: 30em;
+      height: 30em;
+      -webkit-transform: translate(-150%, -100%);
+      -moz-transform: translate(-150%, -100%);
+      -ms-transform: translate(-150%, -100%);
+      -o-transform: translate(-150%, -100%);
+    }
+    100% {
+      transform: translate(50%, 100%);
+      width: 30em;
+      height: 30em;
+      -webkit-transform: translate(50%, 100%);
+      -moz-transform: translate(50%, 100%);
+      -ms-transform: translate(50%, 100%);
+      -o-transform: translate(50%, 100%);
+    }
+  }
+}
 /* ********************** Profile card styling  ********************** */
 .profile-card {
   background-color: #fff;
@@ -103,6 +239,14 @@ body {
 }
 .profile-card .profile-stats .stat-header {
   font-size: 0.75em;
+}
+
+/* ********************** Attribution styling ********************** */
+.attribution {
+  position: absolute;
+  bottom: 5%;
+  margin-inline: auto;
+  text-align: center;
 }
 
 /*# sourceMappingURL=profile-card-component.css.map */
