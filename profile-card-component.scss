@@ -21,7 +21,9 @@ li,
 body {
     font-family: 'Kumbh Sans', sans-serif;
     background: $cyan;
-    height: 100%;
+    overflow: hidden;
+    min-height: 100vh;
+    height: 100vh;
     width: 100%;
     text-align: center;
     font-size: 100%;
@@ -50,22 +52,19 @@ body {
 /* ********************** Background styling  ********************** */
 
 .background {
-    position: fixed;
-    z-index: -10;
-    overflow: hidden;
-    width: 100%;
-    height: 100%;
+    .bg-top,
+    .bg-bottom {
+        position: absolute;
+    }
 
     .bg-top {
-        position: relative;
-        top: -42rem;
-        left: -42rem;
+        transform: translate(-95%, -65%);
     }
 
     .bg-bottom {
-        position: relative;
-        bottom: 41rem;
-        right: -10rem;
+        transform: translate(70%, 65%);
+        bottom: 0;
+        right: 0;
     }
 
     /* ********************** Media queries ********************** */
@@ -87,10 +86,6 @@ body {
             bottom: $bottom;
             right: $right;
         }
-    }
-
-    @include mediaQuerie(300px) {
-        @include background(-41rem, -45rem, 47rem, -5rem)
     }
 
     /* @include mediaQuerie(600px) {
