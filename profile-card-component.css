@@ -1,10 +1,4 @@
 /* ********************** Global element styling  ********************** */
-html {
-  min-height: 100vh;
-  height: 100vh;
-  overflow: hidden;
-}
-
 h1 {
   font-size: 18px;
   color: #2d3248;
@@ -103,13 +97,13 @@ body {
 @media (max-width: 768px) {
   @keyframes bounceDown {
     0% {
-      transform: translate(-100%, -100%);
+      transform: translate(-100%, -70%);
       width: 30em;
       height: 30em;
-      -webkit-transform: translate(-100%, -100%);
-      -moz-transform: translate(-100%, -100%);
-      -ms-transform: translate(-100%, -100%);
-      -o-transform: translate(-100%, -100%);
+      -webkit-transform: translate(-100%, -70%);
+      -moz-transform: translate(-100%, -70%);
+      -ms-transform: translate(-100%, -70%);
+      -o-transform: translate(-100%, -70%);
     }
     50% {
       transform: translate(0%, 100%);
@@ -121,13 +115,13 @@ body {
       -o-transform: translate(0%, 100%);
     }
     100% {
-      transform: translate(-100%, -100%);
+      transform: translate(-100%, -70%);
       width: 30em;
       height: 30em;
-      -webkit-transform: translate(-100%, -100%);
-      -moz-transform: translate(-100%, -100%);
-      -ms-transform: translate(-100%, -100%);
-      -o-transform: translate(-100%, -100%);
+      -webkit-transform: translate(-100%, -70%);
+      -moz-transform: translate(-100%, -70%);
+      -ms-transform: translate(-100%, -70%);
+      -o-transform: translate(-100%, -70%);
     }
   }
 }
@@ -163,31 +157,33 @@ body {
 @media (max-width: 768px) {
   @keyframes bounceUp {
     0% {
-      transform: translate(50%, 100%);
+      transform: translate(30%, 80%);
       width: 30em;
       height: 30em;
-      -webkit-transform: translate(50%, 100%);
-      -moz-transform: translate(50%, 100%);
-      -ms-transform: translate(50%, 100%);
-      -o-transform: translate(50%, 100%);
+      -webkit-transform: translate(30%, 80%);
+      -moz-transform: translate(30%, 80%);
+      -ms-transform: translate(30%, 80%);
+      -o-transform: translate(30%, 80%);
     }
     50% {
-      transform: translate(-150%, -100%);
+      transform: translate(-100%, -80%);
       width: 30em;
       height: 30em;
-      -webkit-transform: translate(-150%, -100%);
-      -moz-transform: translate(-150%, -100%);
-      -ms-transform: translate(-150%, -100%);
-      -o-transform: translate(-150%, -100%);
+      -webkit-transform: translate(-100%, -80%);
+      -moz-transform: translate(-100%, -80%);
+      -ms-transform: translate(-100%, -80%);
+      -o-transform: translate(-100%, -80%);
+      background-color: #000;
     }
     100% {
-      transform: translate(50%, 100%);
+      transform: translate(30%, 80%);
       width: 30em;
       height: 30em;
-      -webkit-transform: translate(50%, 100%);
-      -moz-transform: translate(50%, 100%);
-      -ms-transform: translate(50%, 100%);
-      -o-transform: translate(50%, 100%);
+      -webkit-transform: translate(30%, 80%);
+      -moz-transform: translate(30%, 80%);
+      -ms-transform: translate(30%, 80%);
+      -o-transform: translate(30%, 80%);
+      background-color: #fff;
     }
   }
 }

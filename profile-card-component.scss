@@ -5,12 +5,6 @@ $dark-gray: hsl(0, 0%, 59%);
 
 /* ********************** Global element styling  ********************** */
 
-html {
-    min-height: 100vh;
-    height: 100vh;
-    overflow: hidden;
-}
-
 h1 {
     font-size: 18px;
     color: $desaturated-blue;
@@ -119,7 +113,7 @@ body {
 
     @keyframes bounceDown {
         0% {
-            @include transform(-100%, -100%);
+            @include transform(-100%, -70%);
         }
 
         50% {
@@ -127,7 +121,7 @@ body {
         }
 
         100% {
-            @include transform(-100%, -100%)
+            @include transform(-100%, -70%)
         }
 
     }
@@ -155,15 +149,17 @@ body {
 
     @keyframes bounceUp {
         0% {
-            @include transform(50%, 100%);
+            @include transform(30%, 80%);
         }
 
         50% {
-            @include transform(-150%, -100%);
+            @include transform(-100%, -80%);
+            background-color: #000;
         }
 
         100% {
-            @include transform(50%, 100%)
+            @include transform(30%, 80%);
+            background-color: #fff;
         }
 
     }
