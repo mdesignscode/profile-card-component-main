@@ -154,12 +154,10 @@ body {
 
         50% {
             @include transform(-100%, -80%);
-            background-color: #000;
         }
 
         100% {
-            @include transform(30%, 80%);
-            background-color: #fff;
+            @include transform(0%, 80%);
         }
 
     }
