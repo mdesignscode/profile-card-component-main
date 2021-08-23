@@ -18,14 +18,10 @@ This is a solution to the [Profile card component challenge on Frontend Mentor](
 
 - Build out the project to the designs provided
 
-### Screenshot
-
-![Desktop screenshot](./profile card desktop view screenshot.png)
-
 ### Links
 
-- Solution URL: [Github Repo](https://github.com/mdesignscode/My_Stylesheets)
-- Live Site URL: [Github live site](https://mdesignscode.github.io/My_Stylesheets/)
+- Solution URL: [Github Repo](https://mdesignscode.github.io/profile-card-component-main/)
+- Live Site URL: [Github live site](https://github.com/mdesignscode/profile-card-component-main)
 
 ## My process
 
@@ -37,7 +33,7 @@ This is a solution to the [Profile card component challenge on Frontend Mentor](
 - Scss
 - Mixins
 - Media Queries
-- Animations
+- Css Animations
 
 ## Author
 
