@@ -239,8 +239,8 @@ body {
 
 /* ********************** Attribution styling ********************** */
 .attribution {
-  position: absolute;
-  top: 0;
+  position: relative;
+  top: 90%;
   left: 0;
   right: 0;
   display: flex;
@@ -257,14 +257,9 @@ body {
   }
 }
 .attribution a {
-  animation: colorful 5s 2s infinite;
-  -webkit-animation: colorful 5s 3s infinite;
+  animation: colorful 5s infinite;
+  -webkit-animation: colorful 5s infinite;
   font-size: 1.1em;
-  transform: rotate(-20deg);
-  -webkit-transform: rotate(-20deg);
-  -moz-transform: rotate(-20deg);
-  -ms-transform: rotate(-20deg);
-  -o-transform: rotate(-20deg);
 }
 @keyframes colorful {
   0% {
